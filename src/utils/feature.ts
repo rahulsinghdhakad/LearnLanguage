@@ -5,7 +5,7 @@ import { generate } from "random-words";
 const generateMCQ = (word : { text : string} [] , idx: number)=>{
 
     const correctOption= word[idx].text;
-    const newword= word.filter((i,index)=> index!==idx)
+    const newword= word.filter((i,index)=>{i; return index!==idx} )
 
     const incorrectOption = _.sampleSize(newword,3).map((i)=> i.text)
 
